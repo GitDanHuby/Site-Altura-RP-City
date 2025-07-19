@@ -1,0 +1,193 @@
+<html>
+  <head>
+    <script type="text/javascript">
+function authenticate(p) { output.net.perfectdreams.spicymorenitta.utils.AuthUtils.handlePostAuth(p); };
+
+document.domain = "loritta.website";
+
+function onGoogleRecaptchaLoadCallback() { this['spicy-morenitta'].net.perfectdreams.spicymorenitta.utils.GoogleRecaptchaUtils.onRecaptchaLoadCallback(); };
+
+function onCloudflareTurnstileLoadCallback() { this['spicy-morenitta'].net.perfectdreams.spicymorenitta.utils.CloudflareTurnstileUtils.onRecaptchaLoadCallback(); };
+
+window.addEventListener('load', function () {
+    // Verificar se o usuário está usando o antigo Edge ou MSIE, já que nós não suportamos nenhum desses dois
+    // ; MSIE == MS Internet Explorer
+    // Trident/7.0 == MSIE11
+    if (/(?:\b(MS)?IE\s+|\bTrident\/7\.0;.*\s+rv:|\bEdge\/)(\d+)/.test(navigator.userAgent)) {
+        alert("Youre using an unsupported browser, website features may not work properly!\n\nWe recommend that you change from your browser to...\n\nMozilla Firefox: https://www.mozilla.org/firefox\n\nGoogle Chrome: https://www.google.com/chrome\n\nNew Microsoft Edge: https://www.microsoft.com/edge\n\nFor more info, join the Lorittas Discord Server and contact the support staff: {0}")
+    }
+    // Verificar se o SpicyMorenitta foi carregado corretamente
+    if (window.spicyMorenittaLoaded === undefined) {
+        alert("Something went wrong when loading JavaScript from Lorittas website, website features may not work properly!\n\nCheck if your browser is updated (recommended: Mozilla Firefox, Google Chrome or the New Microsoft Edge) and check if your browser doesnt have a malicious extension or if it isnt blocking external requests.\n\nIf the problem persists, join the Lorittas Discord Server and contact the support staff: {0}")
+    }
+});
+</script>
+    <title>Patrocinadores • Loritta</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#5bbad5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Stylesheet" type="text/css" href="../v2/assets/css/style.css@hash=6ed61790f47b3d9b279440faed48dc08.css">
+    <link rel="Stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-53518408-9"></script>
+    <script type="text/javascript">window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-53518408-9');</script>
+    <script src="https://web-analytics.perfectdreams.net/js/plausible.js" data-domain="loritta.website" defer="defer"></script>
+    <script src="../v2/adsbygoogle.js"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <script src="https://unpkg.com/htmx-ext-sse@2.2.2/sse.js"></script>
+    <script>/**
+ * Tsukifies a element
+ */
+function tsukify(element) {
+    // Null, bail out!
+    if (element === null)
+        return element
+
+    // Already tsukified, bail out!
+    if (element.isTsukified === true)
+        return element
+
+    element.on = (type, func) => {
+        element.addEventListener(type, func);
+        return element;
+    }
+
+    element.addClass = (clazz) => {
+        element.classList.add(clazz);
+        return element;
+    }
+
+    element.hasClass = (clazz) => {
+        return element.classList.contains(clazz);
+    }
+
+    element.removeClass = (clazz) => {
+        element.classList.remove(clazz);
+        return element;
+    }
+
+    element.toggleClass = (clazz) => {
+        if (element.hasClass(clazz)) {
+            element.removeClass(clazz);
+        } else {
+            element.addClass(clazz);
+        }
+        return element;
+    }
+
+    const originalRemove = element.remove
+    element.remove = () => {
+        originalRemove.call(element)
+        return this;
+    }
+
+    element.whenRemovedFromDOM = (func) => {
+        // Create a MutationObserver to watch for the div being removed from the DOM
+        const observer = new MutationObserver((mutations) => {
+            // console.log("mutation happened")
+            if (!document.contains(element)) {
+                // Div is removed, remove the listener
+                // console.log("bye!!!")
+                func()
+                observer.disconnect() // Stop observing once done
+            }
+        });
+
+        // Start observing the parent of the div for childList changes (additions/removals)
+        console.log(self.parentNode)
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        return this;
+    }
+
+    element.selectFirst = (selector) => {
+        const result = element.querySelector(selector)
+        if (result === null)
+            return
+        return tsukify(result)
+    }
+
+    const originalClosest = element.closest
+    element.closest = (selector) => {
+        const result = originalClosest.call(element, selector)
+        if (result === null)
+            return
+        return tsukify(result)
+    }
+
+    element.isTsukified = true;
+
+    return element;
+}
+
+/**
+ * Gets the parent element of the <script>
+ * @returns {TsukiElement}
+ */
+function me() {
+    const scriptElement = document.currentScript;
+    return tsukify(scriptElement.parentNode);
+}
+
+/**
+ * Wraps document.querySelector
+ * @returns {TsukiElement|null}
+ */
+function selectFirst(selector) {
+    const result = document.querySelector(selector)
+    if (result === null)
+        return null
+    return tsukify(result)
+}</script>
+    <script src="../v2/assets/js/app.js@hash=de39cd2750ffcc2ffd463b4d37048428"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit&amp;onload=onGoogleRecaptchaLoadCallback"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onCloudflareTurnstileLoadCallback"></script>
+<script type="text/javascript">
+  window["nitroAds"] = window["nitroAds"] || {
+    createAd: function() {
+      window.nitroAds.queue.push(["createAd", arguments]);
+    },
+    queue: []
+  };
+</script>
+<script async src="https://s.nitropay.com/ads-595.js"></script>    <link rel="alternate" hreflang="pt-BR" href="../br/sponsor/vivo.html">
+    <link rel="alternate" hreflang="en" href="vivo.html">
+    <link rel="alternate" hreflang="es" href="https://loritta.website/es/sponsor/vivo">
+    <link rel="alternate" hreflang="pt" href="https://loritta.website/pt/sponsor/vivo">
+    <meta name="htmx-config" content="{&quot;attributesToSettle&quot;:[&quot;class&quot;,&quot;style&quot;,&quot;width&quot;,&quot;height&quot;,&quot;disabled&quot;,&quot;checked&quot;],&quot;historyCacheSize&quot;:0,&quot;refreshOnHistoryMiss&quot;:true}">
+    <meta name="theme-color" content="#00c1df">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@LorittaBot">
+    <meta name="twitter:creator" content="@MrPowerGamerBR">
+    <meta content="Loritta's Website" property="og:site_name">
+    <meta content="Hello, my name is Loritta! Just a simple Discord bot with unique features you've never seen before! Made for entertainment, moderation, to help you in day-to-day life and more!" property="og:description">
+    <meta content="Patrocinadores" property="og:title">
+    <meta content="600" property="og:ttl">
+    <meta content="https://loritta.website/assets/img/loritta_gabizinha_v1.png" property="og:image">
+  </head>
+  <body>
+    <div id="content" style="text-align: center;">
+      <style>
+body { background-color: #29a6fe; }
+                    
+.redirect-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+}</style>
+      <div class="redirect-center"><img src="https://stuff.loritta.website/loritta-style-allouette.png" width="384" height="384">
+        <div>Redirecionando para o nosso patrocinador, Vivo!</div>
+      </div>
+      <meta http-equiv="refresh" content="3; https://discord.gg/hxUK2nmtTk">
+    </div>
+  </body>
+</html>
